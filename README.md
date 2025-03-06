@@ -1,0 +1,1 @@
+# Static_minute_lotto
