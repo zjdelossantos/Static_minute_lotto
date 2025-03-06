@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #47046f, #2d06ac, #8907d5);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    max-width: 350px;
+}
+
+.game-box {
+    width: 95%;
+    max-width: 400px;
+    height: 95vw;
+    max-height: 400px;
+    background: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1740983500/the_lottery_can_be_fun_and_exciting__the_real_treat_lies_in_winning_the_lotto_prizes_-_including_the_jackpot__And_unlike_what_some_lotto_players_believe__you_can_win_the_lotto_using_lottery_cheats_-re_piztyo.png'),
+                linear-gradient(to bottom, rgba(119, 61, 255, 0.8), rgba(38, 6, 43, 0.8));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    border-radius: 72px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 4px solid gold;
+    margin-top: -30px; /* Moves the game box slightly higher */
+}
+
+.logo {
+    width: 150%;
+}
+
+.play-container {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.play-btn {
+    background: linear-gradient(to bottom, #e60000, #a40000); 
+    color: white;
+    border: 3px solid gold;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 42px;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+/* Pressed Effect */
+.play-btn:active {
+    box-shadow: 0 3px #3003034d, 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(3px);
+    background: linear-gradient(to bottom, #a40000, #800000);
+}
+
+/* Hover Effect */
+.play-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .game-box {
+        max-width: 500px;
+        max-height: 500px;
+        border-radius: 82px;
+        margin-top: -40px; /* Moves the game box higher on larger screens */
+    }
+
+    .logo {
+        width: 500px;
+    }
+
+    .play-btn {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+}

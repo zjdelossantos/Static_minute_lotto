@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@400;700&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #47046f, #2d06ac, #8907d5, #2d06ac, #47046f);
+    background-size: 100% 300vh; /* Ensures a long gradient */
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 2px;
+    width: 100px;
+    height: 100px;
+}
+.jackpot-container {
+    position: absolute;
+    top: 150px;
+    left: 80px;
+}
+.jackpot-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    margin-bottom: 5px;
+}
+.jackpot-box {
+    padding: 15px 25px;
+    background: radial-gradient(circle, #fcf1b3, #E6C200);
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 16px;
+    display: inline-block;
+}
+
+.winning-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.winning-text {
+    font-size: 57px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 0 yellow, -2px -2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow;
+    margin-bottom: 20px;
+}
+
+
+.winning-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.number {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #fef2a0, #d4a900);
+    color: black;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-container {
+    position: absolute;
+    top: 70%; /* Positioned below the winning numbers */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #57ff57, #00b300); /* Green gradient */
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease-in-out; /* Smooth transition */
+}
+
+.countdown-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+}
+
+.number-selection {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.bet-input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    outline: none;
+}
+
+
+.bet-container {
+    position: absolute;
+    top: calc(65% + 80px);
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 4px solid gold;
+    border-radius: 12px;
+    padding: 30px;
+    width: 900px; /* Increased width for a bigger effect */
+    text-align: center;
+    background: linear-gradient(to bottom, #491577, #040354, #07066D);
+    background-image: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1740983482/coin-removebg-preview_e254u5.png');
+    background-image: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1740983482/coin-removebg-preview_e254u5.png');
+    background-blend-mode: overlay;
+    background-size: cover;
+    color: white;
+     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), 
+                inset 4px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+
+button.bet-btn{
+    margin-left: 30px
+}
+
+.reset-btn, .bet-btn {
+    font-family: 'Gentium Basic', serif;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid rgb(255, 240, 28);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5); /* 3D effect */
+    transition: all 0.2s ease-in-out;
+}
+
+.reset-btn {
+    background: linear-gradient(to bottom, #ff4d4d, #b30000);
+    color: white;
+}
+
+.bet-btn {
+    background: linear-gradient(to bottom, #57ff57, #008f00);
+    color: white;
+}
+
+.reset-btn:active, .bet-btn:active {
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    transform: translate(2px, 2px);
+}
+
+/* Styled the amount input field properly */
+.bet-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the text and input */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Added spacing */
+}
+
+.bet-amount label {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#amount {
+    padding: 10px;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+    border: 3px solid gold;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.last-winners {
+    border: 2px solid gold;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.3);
+}
