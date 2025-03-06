@@ -13,6 +13,8 @@ body {
     justify-content: flex-start;
     flex-direction: column;
     padding: 20px;
+    font-family: 'Gentium Basic', serif;
+
 }
 .logo {
     position: absolute;
@@ -106,19 +108,28 @@ body {
 .number-selection {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 40px; /* Adds space between inputs */
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .bet-input {
-    width: 40px;
-    height: 40px;
+    width: 60px; /* Adjust the width */
+    height: 60px; /* Adjust the height */
+    font-size: 24px;
     text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    border: 2px solid black;
+    border: 3px solid #444;
     border-radius: 10px;
+    background: linear-gradient(to bottom, #fff, #ddd);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.bet-input:focus {
+    border-color: #ff9800;
+    box-shadow: 3px 3px 8px rgba(255, 152, 0, 0.6);
+    background: linear-gradient(to bottom, #fff, #bbb);
 }
 
 
@@ -133,8 +144,7 @@ body {
     width: 900px; /* Increased width for a bigger effect */
     text-align: center;
     background: linear-gradient(to bottom, #491577, #040354, #07066D);
-    background-image: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1740983482/coin-removebg-preview_e254u5.png');
-    background-image: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1740983482/coin-removebg-preview_e254u5.png');
+    background-image: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1741268476/coins_wwkcvl.png');
     background-blend-mode: overlay;
     background-size: cover;
     color: white;
@@ -209,4 +219,24 @@ button.bet-btn{
     display: inline-block;
     font-weight: bold;
     background: rgba(0, 0, 0, 0.3);
+}
+.profile-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: transform 0.2s;
+}
+
+.profile-button img:hover {
+    transform: scale(1.1);
 }

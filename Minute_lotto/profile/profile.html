@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon.ico">
+    <title>Profile</title>
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='../main/main.html'">
+        &#8592;
+    </button>    
+    <h1 class="profile-title">PROFILE ACCOUNT</h1>
+
+    <div class="profile-container">
+        <div class="username-email contaner">
+            <p class="username">Zeldrick Jesus</p>
+            <p class="email">Email: <span>johndoe@example.com</span></p>
+        </div>
+
+
+        <div class="wallet-container">
+            <div class="wallet-box e-wallet">
+                <p>E-Wallet:</p>
+                <p class="amount">₱ 200.00</p>
+            </div>
+
+            <div class="wallet-box total-wins">
+                <p>Total Wins:</p>
+                <p class="amount">₱ 200.00</p>
+            </div>
+        </div>
+
+        <div class="wallet-buttons">
+            <button class="cash-in">CASH IN</button>
+            <button class="cash-out">CASH OUT</button>
+        </div>
+
+        <button class="logout-button" onclick="logout()">LOGOUT</button>
+    </div>
+
+    <script>
+        function logout() {
+            window.location.href = '../login/login.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #3a015c, #5a0eb7, #8b2cd6, #5a0eb7, #3a015c);
+    background-size: 100% 300vh;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    font-family: 'Gentium Basic', serif;
+    color: #fff;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffcc00;
+    transition: transform 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
+
+.profile-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 8px rgba(255, 204, 0, 0.8);
+}
+
+.profile-container {
+    width: 530px;
+    padding: 30px;
+    background: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1741268476/coins_wwkcvl.png'), linear-gradient(to bottom,#8907d5, #2d06ac, #47046f);
+    border: 5px solid gold; /* Solid gold border */
+    border-radius: 15px;
+    box-shadow: 
+        0 5px 15px rgba(255, 204, 0, 0.6), /* Outer shadow */
+        inset 3px 3px 8px rgba(255, 255, 255, 0.3), /* Highlight effect */
+        inset -3px -3px 8px rgba(0, 0, 0, 0.4); /* Inner depth effect */
+    text-align: center;
+}
+
+
+.wallet-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.wallet-box {
+    width: 200px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #fff799, #fdd835);
+    border: 2px solid #b8860b;
+    border-radius: 12px;
+    box-shadow: 
+        inset 3px 3px 5px rgba(255, 255, 255, 0.6),
+        inset -3px -3px 5px rgba(0, 0, 0, 0.3),
+        5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.wallet-box:active {
+    box-shadow: 
+        inset 5px 5px 10px rgba(0, 0, 0, 0.4),
+        inset -3px -3px 5px rgba(255, 255, 255, 0.3);
+    transform: translateY(2px);
+}
+
+.wallet-box p {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #111;
+}
+
+.wallet-box::before {
+    content: attr(data-label);
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffcc00;
+    color: #222;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(255, 204, 0, 0.5);
+}
+
+#cash-balance {
+    color: #00ff00;
+}
+
+#total-wins {
+    color: #ff5733;
+}
+
+.wallet-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cash-in {
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    border: 3px solid #ffcc00;
+    color: white;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px rgba(0, 71, 171, 0.8), inset -3px -3px 6px rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.cash-in:hover {
+    background: linear-gradient(to bottom, #0056b3, #004080);
+    box-shadow: 5px 5px 10px rgba(0, 71, 171, 1);
+}
+
+.cash-out {
+    background: linear-gradient(to bottom, #28a745, #1e7e34);
+    border: 3px solid #ffcc00;
+    color: white;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px rgba(255, 204, 0, 0.8), inset -3px -3px 6px rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.cash-out:hover {
+    background: linear-gradient(to bottom, #1e7e34, #155724);
+    box-shadow: 5px 5px 10px rgba(255, 204, 0, 1);
+}
+.logout-button {
+    position: absolute;
+    bottom: 30px;
+    left: 90%;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, #d00, #900);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    box-shadow: 
+        4px 4px 8px rgba(0, 0, 0, 0.6),
+        inset -2px -2px 4px rgba(255, 100, 100, 0.3),
+        inset 2px 2px 5px rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.logout-button:hover {
+    background: linear-gradient(to bottom, #a00, #700);
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.8);
+}
+
+.logout-button:active {
+    box-shadow: 
+        inset 6px 6px 10px rgba(0, 0, 0, 0.7),
+        inset -2px -2px 4px rgba(255, 100, 100, 0.3);
+    transform: translateX(-50%) translateY(3px);
+}
+
+.username-email {
+    width: 90%;
+    max-width: 480px;
+    background: linear-gradient(to bottom, #333, #222);
+    border: 3px solid #ffcc00;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: 
+        inset 5px 5px 10px rgba(255, 255, 255, 0.2),
+        inset -5px -5px 10px rgba(0, 0, 0, 0.5),
+        6px 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.username-email p {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.username-email .username {
+    font-size: 24px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 3px rgba(255, 204, 0, 0.8);
+}
+
+.username-email .email {
+    font-size: 16px;
+    color: #ddd;
+}
