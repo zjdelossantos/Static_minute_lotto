@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
-
 body {
     margin: 0;
     padding: 0;
@@ -40,24 +39,22 @@ body {
     text-align: center;
     margin-bottom: 20px;
     -webkit-text-stroke: 0.5px black; 
-    color: gold; /* Changed color to gold */
+    color: gold;
     font-family: "Dela Gothic One", sans-serif;
-
 }
 
 .profile-container {
     width: 530px;
     padding: 30px;
     background: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1741268476/coins_wwkcvl.png'), linear-gradient(to bottom,#8907d5, #2d06ac, #47046f);
-    border: 5px solid gold; /* Solid gold border */
+    border: 5px solid gold;
     border-radius: 15px;
     box-shadow: 
-        0 5px 15px rgba(255, 204, 0, 0.6), /* Outer shadow */
-        inset 3px 3px 8px rgba(255, 255, 255, 0.3), /* Highlight effect */
-        inset -3px -3px 8px rgba(0, 0, 0, 0.4); /* Inner depth effect */
+        0 5px 15px rgba(255, 204, 0, 0.6),
+        inset 3px 3px 8px rgba(255, 255, 255, 0.3),
+        inset -3px -3px 8px rgba(0, 0, 0, 0.4);
     text-align: center;
 }
-
 
 .wallet-container {
     display: flex;
@@ -112,7 +109,7 @@ body {
     font-weight: bold;
     padding: 6px 12px;
     border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(255, 204, 0, 0.5);
+    box-shadow: 0 3px 6px rgba(255,     204, 0.5);
 }
 
 #cash-balance {
@@ -129,6 +126,7 @@ body {
     justify-content: center;
     gap: 20px;
 }
+
 .cash-in {
     background: linear-gradient(to bottom, #007bff, #0056b3);
     border: 3px solid #ffcc00;
@@ -142,7 +140,6 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-/* Hover effect */
 .cash-in:hover {
     background: linear-gradient(to bottom, #0056b3, #004080);
     box-shadow: inset 0 3px 7px rgba(255, 255, 255, 0.4),
@@ -150,7 +147,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Active effect */
 .cash-in:active {
     transform: scale(0.95);
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
@@ -169,7 +165,6 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-/* Hover effect */
 .cash-out:hover {
     background: linear-gradient(to bottom, #1e7e34, #155724);
     box-shadow: inset 0 3px 7px rgba(255, 255, 255, 0.4),
@@ -177,7 +172,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Active effect */
 .cash-out:active {
     transform: scale(0.95);
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
@@ -205,7 +199,6 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-/* Hover Effect */
 .logout-button:hover {
     background: linear-gradient(to bottom, #a00, #700);
     box-shadow: 
@@ -249,4 +242,62 @@ body {
 .username-email .email {
     font-size: 16px;
     color: #ddd;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .profile-container {
+        width: 90%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .wallet-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .wallet-box {
+        width: 100%;
+    }
+
+    .wallet-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cash-in, .cash-out {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .logout-button {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+        left: 0;
+        transform: none;
+    }
+
+
+    .username-email {
+        width: 100%;
+    }
+
+    .username-email p {
+        font-size: 16px;
+    }
+
+    .username-email .username {
+        font-size: 20px;
+    }
+
+    .username-email .email {
+        font-size: 14px;
+    }
 }

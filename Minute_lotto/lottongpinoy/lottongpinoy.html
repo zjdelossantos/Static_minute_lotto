@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/png" href="/favicon_io/favicon.ico"> <!-- Add your favicon here -->
+    <link rel="stylesheet" href="lottongpinoy.css">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon.ico">
     <title>Main</title>
 </head>
 <body>
-    <!-- Profile Button -->
     <button class="profile-button" onclick="window.location.href='../profile/profile.html'">
         <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1741270879/user_2_vmytbq.png" alt="Profile Icon">
     </button>
@@ -17,13 +16,16 @@
         <div class="jackpot-text">JACKPOT PRIZE:</div>
         <div class="jackpot-box">₱ 1,500.00</div>
     </div>
+
     <div class="winning-container">
         <div class="winning-text">WINNING COMBINATIONS!</div>
         <div class="winning-numbers" id="winningNumbers"></div>
     </div>
+
     <div class="countdown-container">
-        <div class="countdown-text" id="countdown">Next Draw in : 60s</div>
+        <div class="countdown-text" id="countdown">Next Draw in: 60s</div>
     </div>
+
     <div class="bet-container">
         <div class="number-selection">
             <input type="number" class="bet-input" maxlength="2">
@@ -38,6 +40,7 @@
             <button class="reset-btn">RESET</button>
             <button class="bet-btn">ENTER BET</button>
         </div>
+
         <div class="bet-amount">
             <label for="amount">Enter Amount:</label>
             <input type="number" id="amount" min="20" step="20" value="20">
@@ -49,5 +52,5 @@
         </div>
     </div>
 </body>
-<script src="main.js"></script>
+<script src="lottongpinoy.js"></script>
 </html>

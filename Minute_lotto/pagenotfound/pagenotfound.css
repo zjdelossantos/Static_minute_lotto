@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-family: "Dela Gothic One", sans-serif;
+    perspective: 800px;
+    background: linear-gradient(to bottom, #47046f, #2d06ac, #8907d5, #2d06ac, #47046f);
+
+
+}
+
+.container {
+    background: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1741368262/-Raining-Coins-unscreen_yejjhx.gif') center/cover no-repeat, linear-gradient(to bottom, #47046f, #2d06ac, #8907d5, #2d06ac, #47046f);;
+    padding: 40px;
+    border: 5px solid gold;
+    border-radius: 15px;
+    box-shadow: 
+        -10px 10px 15px rgba(0, 0, 0, 0.4),
+        10px -10px 15px rgba(255, 215, 0, 0.2),
+        inset -5px -5px 10px rgba(0, 0, 0, 0.3),
+        inset 5px 5px 10px rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.logo {
+    width: 200px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 3rem;
+    color: #e7d700;
+    padding: 10px;
+    display: inline-block;
+    animation: bounce 1s infinite alternate ease-in-out;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #eccc15;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(to bottom, #3a8df7, #206ff7);
+    border: 3px solid gold;
+    border-radius: 10px;
+    box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.2),
+                inset 4px 4px 6px rgba(0, 0, 0, 0.3),
+                2px 2px 6px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-weight: lighter;
+    transition: all 0.2s ease-in-out;
+}
+
+.back-btn:hover {
+    background: linear-gradient(to bottom, #4ea3ff, #2876ff);
+    box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.3),
+                inset 3px 3px 5px rgba(0, 0, 0, 0.4),
+                2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.back-btn:active {
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.6),
+                inset -2px -2px 6px rgba(255, 255, 255, 0.3);
+    transform: translateY(2px);
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -202,7 +202,7 @@ input {
 
 .overlay-left {
     transform: translateX(-20%);
-	background: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1740983482/coin-removebg-preview_e254u5.png') center/cover no-repeat;	
+	background: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1741368262/-Raining-Coins-unscreen_yejjhx.gif') center/cover no-repeat;	
 	
 }
 
@@ -214,7 +214,7 @@ input {
 .overlay-right {
     right: 0;
     transform: translateX(0);
-	background: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1740983482/coin-removebg-preview_e254u5.png') center/cover no-repeat;	
+	background: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1741368262/-Raining-Coins-unscreen_yejjhx.gif') center/cover no-repeat;	
 }
 
 
