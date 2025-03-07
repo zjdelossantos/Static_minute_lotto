@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 body {
     margin: 0;
@@ -16,16 +16,9 @@ body {
     font-family: 'Gentium Basic', serif;
 
 }
-.logo {
-    position: absolute;
-    top: 20px;
-    left: 2px;
-    width: 100px;
-    height: 100px;
-}
 .jackpot-container {
     position: absolute;
-    top: 150px;
+    top: 20px;
     left: 80px;
 }
 .jackpot-text {
@@ -49,14 +42,15 @@ body {
 
 .winning-container {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
 .winning-text {
-    font-size: 57px;
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 43px;
     font-weight: bold;
     color: black;
     text-shadow: 2px 2px 0 yellow, -2px -2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow;
@@ -88,7 +82,7 @@ body {
 
 .countdown-container {
     position: absolute;
-    top: 70%; /* Positioned below the winning numbers */
+    top: 48%; /* Positioned below the winning numbers */
     left: 50%;
     transform: translate(-50%, -50%);
     background: radial-gradient(circle, #57ff57, #00b300); /* Green gradient */
@@ -135,7 +129,7 @@ body {
 
 .bet-container {
     position: absolute;
-    top: calc(65% + 80px);
+    top: 55%;
     left: 50%;
     transform: translate(-50%, 0);
     border: 4px solid gold;
@@ -152,9 +146,8 @@ body {
                 inset 4px 4px 10px rgba(255, 255, 255, 0.2);
 }
 
-
-button.bet-btn{
-    margin-left: 30px
+button.bet-btn {
+    margin-left: 30px;
 }
 
 .reset-btn, .bet-btn {
@@ -179,10 +172,19 @@ button.bet-btn{
     color: white;
 }
 
-.reset-btn:active, .bet-btn:active {
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
-    transform: translate(2px, 2px);
+/* Hover effect */
+.reset-btn:hover, .bet-btn:hover {
+    box-shadow: inset 0 3px 7px rgba(255, 255, 255, 0.4),
+                0 8px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
 }
+
+/* Active effect */
+.reset-btn:active, .bet-btn:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
 
 /* Styled the amount input field properly */
 .bet-amount {
@@ -233,7 +235,7 @@ button.bet-btn{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 3px solid rgb(240, 196, 0);
     transition: transform 0.2s;
 }
 

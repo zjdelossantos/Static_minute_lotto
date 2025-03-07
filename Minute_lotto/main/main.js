@@ -43,75 +43,34 @@ setInterval(updateCountdown, 1000);
 generateWinningNumbers();
 
 //bet-input
-//error (tinatanggap nya pa din ung 00 dapat di pede)
-document.addEventListener("DOMContentLoaded", function () { 
-    const inputs = document.querySelectorAll(".bet-input");
 
-    inputs.forEach((input, index) => {
-        input.addEventListener("input", function (e) {
-            let value = this.value.replace(/\D/g, ""); // Remove non-numeric characters
-
-            if (value.length > 2) {
-                value = value.slice(0, 2); // Limit to 2 digits
-            }
-
-            if (value !== "") {
-                let num = parseInt(value, 10);
-
-                if (value.length === 2) {
-                    if (num > 49) {
-                        this.value = ""; // Clear if out of range
-                    } else {
-                        this.value = value; // Keep valid input
-                        if (index < inputs.length - 1) {
-                            inputs[index + 1].focus(); // Move to next input
-                        }
-                    }
-                } else {
-                    this.value = value; // Allow typing one digit
-                }
-            } else {
-                this.value = ""; // Clear if input is empty
-            }
-        });
-
-        input.addEventListener("keydown", function (e) {
-            if (e.key === "Backspace" && this.value === "" && index > 0) {
-                inputs[index - 1].focus(); // Move back on delete
-            }
-        });
-
-        input.addEventListener("paste", function (e) {
-            e.preventDefault(); // Prevent pasting
-        });
-    });
-});
-
-
-document.getElementById("amount").addEventListener("input", function () {
-    let value = parseInt(this.value, 10);
-    if (value % 20 !== 0) {
-        this.value = value - (value % 20); // Round down to the nearest multiple of 20
-    }
-});
 document.addEventListener("DOMContentLoaded", function () {
     const inputs = document.querySelectorAll(".bet-input");
-    
+
     inputs.forEach(input => {
         input.addEventListener("input", function () {
-            let value = parseInt(this.value, 10);
-            if (isNaN(value) || value < 1 || value > 49) {
+            let value = this.value.trim();
+
+            // Ensure the input is a valid number within range
+            if (!/^\d{1,2}$/.test(value) || value < 1 || value > 49) {
                 this.value = "";
                 return;
             }
-            
-            // Ensure uniqueness
-            let values = Array.from(inputs).map(inp => inp.value);
-            let duplicates = values.filter(v => v !== "" && values.indexOf(v) !== values.lastIndexOf(v));
-            
-            if (duplicates.length > 0) {
-                alert("Number already entered! Please enter a unique number.");
+
+            // Check for duplicate numbers
+            let values = Array.from(inputs).map(inp => inp.value).filter(v => v !== "");
+            let uniqueValues = new Set(values);
+
+            if (uniqueValues.size !== values.length) {
                 this.value = "";
+            }
+        });
+
+        // Prevent entering non-numeric values and limit input length to 2
+        input.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") return;
+            if (!/^\d$/.test(e.key) && e.key !== "Backspace" && e.key !== "Tab") {
+                e.preventDefault();
             }
         });
     });

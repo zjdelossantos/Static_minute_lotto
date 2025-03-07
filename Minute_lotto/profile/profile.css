@@ -124,7 +124,6 @@ body {
     justify-content: center;
     gap: 20px;
 }
-
 .cash-in {
     background: linear-gradient(to bottom, #007bff, #0056b3);
     border: 3px solid #ffcc00;
@@ -138,9 +137,18 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
+/* Hover effect */
 .cash-in:hover {
     background: linear-gradient(to bottom, #0056b3, #004080);
-    box-shadow: 5px 5px 10px rgba(0, 71, 171, 1);
+    box-shadow: inset 0 3px 7px rgba(255, 255, 255, 0.4),
+                0 8px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+/* Active effect */
+.cash-in:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cash-out {
@@ -156,10 +164,20 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
+/* Hover effect */
 .cash-out:hover {
     background: linear-gradient(to bottom, #1e7e34, #155724);
-    box-shadow: 5px 5px 10px rgba(255, 204, 0, 1);
+    box-shadow: inset 0 3px 7px rgba(255, 255, 255, 0.4),
+                0 8px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
 }
+
+/* Active effect */
+.cash-out:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
 .logout-button {
     position: absolute;
     bottom: 30px;
