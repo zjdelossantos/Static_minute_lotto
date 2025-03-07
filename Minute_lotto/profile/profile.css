@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
 
 body {
     margin: 0;
@@ -37,7 +39,10 @@ body {
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-    text-shadow: 3px 3px 8px rgba(255, 204, 0, 0.8);
+    -webkit-text-stroke: 0.5px black; 
+    color: gold; /* Changed color to gold */
+    font-family: "Dela Gothic One", sans-serif;
+
 }
 
 .profile-container {
