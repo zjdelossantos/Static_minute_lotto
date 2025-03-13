@@ -133,7 +133,7 @@ body {
 .number-selection {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Adds space between inputs */
+    gap: 40px; 
     margin-top: 20px;
     margin-bottom: 30px;
 }

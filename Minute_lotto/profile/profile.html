@@ -19,7 +19,6 @@
             <p class="email">Email: <span>johndoe@example.com</span></p>
         </div>
 
-
         <div class="wallet-container">
             <div class="wallet-box e-wallet">
                 <p>E-Wallet:</p>
@@ -33,17 +32,48 @@
         </div>
 
         <div class="wallet-buttons">
-            <button class="cash-in">CASH IN</button>
-            <button class="cash-out">CASH OUT</button>
+            <button class="cash-in" onclick="openPopup('cash-in-popup')">CASH IN</button>
+            <button class="cash-out" onclick="openPopup('cash-out-popup')">CASH OUT</button>
         </div>
 
         <button class="logout-button" onclick="logout()">LOGOUT</button>
     </div>
 
-    <script>
-        function logout() {
-            window.location.href = '../login/login.html';
-        }
-    </script>
+    <!-- Cash In Popup -->
+    <div id="cash-in-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>CASH IN</h2>
+                <span class="close-popup" onclick="closePopup('cash-in-popup')">&times;</span>
+            </div>
+            <div class="popup-body">
+                <div class="amount-input">
+                    <label for="cash-in-amount">Amount (₱):</label>
+                    <input type="number" id="cash-in-amount" min="50" placeholder="Enter amount">
+                </div>
+                <button class="confirm-button" onclick="processCashIn()">CONFIRM</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cash Out Popup -->
+    <div id="cash-out-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>CASH OUT</h2>
+                <span class="close-popup" onclick="closePopup('cash-out-popup')">&times;</span>
+            </div>
+            <div class="popup-body">
+                <div class="amount-input">
+                    <label for="cash-out-amount">Amount (₱):</label>
+                    <input type="number" id="cash-out-amount" min="50" max="200" placeholder="Enter amount">
+                    <p class="available-balance">Available Balance: ₱200.00</p>
+                </div>
+                <button class="confirm-button" onclick="processCashOut()">CONFIRM</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
 </body>
 </html>
